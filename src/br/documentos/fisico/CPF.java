@@ -100,21 +100,7 @@ public class CPF {
      * <h1> Verifica qual foi o estado que emitiu o CPF </h1>
      *
      * Alguns estados podem possuir o mesmo dígito de verificação, portanto, nem
-     * sempre é possível dizer com precisão, qual o estado emissor. Abaixo há
-     * uma tabela demonstrando o identificador de cada estado. <br/>
-     * <center> <table cellpadding="2" cellspacing="1" width="230"> <tbody> <tr>
-     * <td width="30%"><b>Número</b></td> <td width="70%"><b>Estado</b></td>
-     * </tr> <tr> <td width="30%">1</td> <td width="70%">GO/MT/MS/DF/TO</td>
-     * </tr> <tr> <td width="30%">2</td> <td width="70%">AM/AC/PA/RR/RO/AP</td>
-     * </tr> <tr> <td width="30%">3</td> <td width="70%">MA/CE/PI</td> </tr>
-     * <tr> <td width="30%">4</td> <td width="70%">RN/PB/PE/AL</td> </tr> <tr>
-     * <td width="30%">5</td> <td width="70%">SE/BA</td> </tr> <tr> <td
-     * width="30%">6</td> <td width="70%">MG</td> </tr> <tr> <td
-     * width="30%">7</td> <td width="70%">RJ/ES</td> </tr> <tr> <td
-     * width="30%">8</td> <td width="70%">SP</td> </tr> <tr> <td
-     * width="30%">9</td> <td width="70%">PR/SC</td> </tr> <tr> <td
-     * width="30%">0</td> <td width="70%">RS</td> </tr> </tbody> </table>
-     * </center>
+     * sempre é possível dizer com precisão, qual o estado emissor.
      *
      * @param sCpf CPF a ser verificado
      * @return sigla, ou siglas, do estado que emitiu o CPF

@@ -48,10 +48,6 @@ public class EstRO extends IE {
             dv -= 10;
         }
         
-        if (dv != insc[13]) {
-            return false;
-        } else {
-            return true;
-        }
+        return dv == insc[13];
     }
 }

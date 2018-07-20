@@ -14,7 +14,7 @@ public class IE {
 
     /**
      * Construtor padrão da classe
-     * 
+     *
      * @param ie inscrição estadual
      */
     public IE(String ie) {
@@ -24,8 +24,9 @@ public class IE {
     /**
      * Passa a inscrição estadual de uma string para um vetor de inteiros
      *
-     * <i> Mais informações, acesse: </i> <a href="http://www.sintegra.gov.br/"> SINTEGRA </a>
-     * 
+     * <i> Mais informações, acesse: </i> <a href="http://www.sintegra.gov.br/">
+     * SINTEGRA </a>
+     *
      * @param ie inscrição estadual em string
      * @param tam quantidade de dígitos da inscrição estadual
      * @return inscrição estadual em vetor de inteiros

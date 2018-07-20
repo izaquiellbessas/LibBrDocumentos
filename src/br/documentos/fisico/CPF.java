@@ -28,7 +28,7 @@ public class CPF {
             try { //monta o doc, ignora a mascara, le da esquerda para direita, e escreve da direita para esquerda
                 cpf[j] = Integer.parseInt(sCpf.substring(i, i + 1));
                 j--;
-            } catch (Exception e) {
+            } catch (NumberFormatException e) {
             }
         }
         dv1 = calculaDV(cpf, pesos);
@@ -43,11 +43,7 @@ public class CPF {
         if (verificaConteudoIgualVetor(cpf)) {
             return false;
         }
-        if (sCpf.endsWith(dv)) {
-            return true;
-        } else {
-            return false;
-        }
+        return sCpf.endsWith(dv);
     }
 
     /**
@@ -105,7 +101,7 @@ public class CPF {
      *
      * Alguns estados podem possuir o mesmo dígito de verificação, portanto, nem
      * sempre é possível dizer com precisão, qual o estado emissor. Abaixo há
-     * uma tabela demonstrando o identificador de cada estado. <br/><br/>
+     * uma tabela demonstrando o identificador de cada estado. <br/>
      * <center> <table cellpadding="2" cellspacing="1" width="230"> <tbody> <tr>
      * <td width="30%"><b>Número</b></td> <td width="70%"><b>Estado</b></td>
      * </tr> <tr> <td width="30%">1</td> <td width="70%">GO/MT/MS/DF/TO</td>
@@ -128,7 +124,7 @@ public class CPF {
         for (int i = 0; i < cpf.length; i++) {
             try {
                 cpf[i] = Integer.parseInt(String.valueOf(sCpf.charAt(i)));
-            } catch (Exception e) {
+            } catch (NumberFormatException e) {
             }
         }
         switch (cpf[8]) {

@@ -57,11 +57,7 @@ public class EstTO extends IE {
      */
     public boolean isProdutorRural() {
         int[] insc = adequaStringParaIntegers(this.getIe(), 11);
-        if (insc[2] == 0 && insc[3] == 1) {
-            return true;
-        } else {
-            return false;
-        }
+        return insc[2] == 0 && insc[3] == 1;
     }
 
     /**
@@ -70,11 +66,7 @@ public class EstTO extends IE {
      */
     public boolean isIndECom() {
         int[] insc = adequaStringParaIntegers(this.getIe(), 11);
-        if (insc[2] == 0 && insc[3] == 2) {
-            return true;
-        } else {
-            return false;
-        }
+        return insc[2] == 0 && insc[3] == 2;
     }
 
     /**
@@ -83,11 +75,7 @@ public class EstTO extends IE {
      */
     public boolean isEmpRudimentar() {
         int[] insc = adequaStringParaIntegers(this.getIe(), 11);
-        if (insc[2] == 0 && insc[3] == 3) {
-            return true;
-        } else {
-            return false;
-        }
+        return insc[2] == 0 && insc[3] == 3;
     }
 
     /**
@@ -96,10 +84,6 @@ public class EstTO extends IE {
      */
     public boolean isEmpCadAntigoSUSPENSA() {
         int[] insc = adequaStringParaIntegers(this.getIe(), 11);
-        if (insc[2] == 9 && insc[3] == 9) {
-            return true;
-        } else {
-            return false;
-        }
+        return insc[2] == 9 && insc[3] == 9;
     }
 }

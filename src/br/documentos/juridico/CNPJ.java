@@ -27,7 +27,7 @@ public class CNPJ {
             try { //monta o doc, ignora a mascara, le da esq para dir, e escreve da dir para esq
                 cnpj[j] = Integer.parseInt(sCnpj.substring(i, i + 1));
                 j--;
-            } catch (Exception e) {
+            } catch (NumberFormatException e) {
             }
         }
 
@@ -47,11 +47,7 @@ public class CNPJ {
         if (verificaConteudoIgualVetor(cnpj)) {
             return false;
         }
-        if (sCnpj.endsWith(dv)) {
-            return true;
-        } else {
-            return false;
-        }
+        return sCnpj.endsWith(dv);
     }
 
     /**

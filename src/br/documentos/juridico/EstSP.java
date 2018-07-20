@@ -27,11 +27,7 @@ public class EstSP extends IE {
      * ind.e com. e false caso contrário, ou caso não seja de um produtor rural
      */
     public boolean isProdutorRural() {
-        if (this.getIe().substring(0, 1).equals("P")) {
-            return true;
-        } else {
-            return false;
-        }
+        return this.getIe().substring(0, 1).equals("P");
     }
 
     /**
@@ -76,11 +72,7 @@ public class EstSP extends IE {
             resto = String.valueOf(soma % 11);
             int dv2 = Integer.parseInt(resto.substring(resto.length()-1));
 
-            if (dv2 != insc[11]) {
-                return false;
-            } else {
-                return true;
-            }
+            return dv2 == insc[11];
 
         } else if (isProdutorRural()) {
 
@@ -98,11 +90,7 @@ public class EstSP extends IE {
             String resto = String.valueOf(soma % 11);
             int dv = Integer.parseInt(resto.substring(resto.length()-1));
 
-            if (dv != insc[8]) {
-                return false;
-            } else {
-                return true;
-            }
+            return dv == insc[8];
         } else {
             return false;
         }

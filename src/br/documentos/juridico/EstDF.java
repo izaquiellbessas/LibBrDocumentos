@@ -76,10 +76,6 @@ public class EstDF extends IE {
      */
     public boolean isMatriz() {
         int[] insc = adequaStringParaIntegers(this.getIe(), 13);
-        if (insc[8] == 0 && insc[9] == 0 && insc[10] == 1) {
-            return true;
-        } else {
-            return false;
-        }
+        return insc[8] == 0 && insc[9] == 0 && insc[10] == 1;
     }
 }

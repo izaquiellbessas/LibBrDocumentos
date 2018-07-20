@@ -60,10 +60,6 @@ public class EstPR extends IE {
         if (dv2 == 10 || dv2 == 11) {
             dv2 = 0;
         }
-        if (dv2 != insc[9]) {
-            return false;
-        } else {
-            return true;
-        }
+        return dv2 == insc[9];
     }
 }

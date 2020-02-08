@@ -11,13 +11,12 @@ package br.documentos.fisico;
 public class CPF {
 
     /**
-     * <h1> Valida se o CPF fornecido √© um CPF v√°lido </h1>
+     * <h1> Valida se o CPF fornecido È um CPF v·lido </h1>
      *
      * Deve-se fornecer um CPF (em string), para que este seja validado.
      *
      * @param sCpf CPF a ser validado.
-     * @return verdadeiro caso o CPF fornecido for um CPF v√°lido e falso caso
-     * n√£o seja v√°lido.
+     * @return verdadeiro caso o CPF fornecido for um CPF v·lido e falso caso contr·rio.
      */
     public boolean isCPF(String sCpf) {
         int[] cpf = new int[9];
@@ -68,16 +67,15 @@ public class CPF {
     }
 
     /**
-     * Transfere o conte√∫do do vetor menor para o vetor maior, atrav√©s de uma
-     * opera√ß√£o nativa, System.arraycopy
+     * Transfere o conte˙do do vetor menor para o vetor maior, atravÈs de uma operaÁ„o nativa, System.arraycopy
      *
-     * @param menor menor vetor
-     * @param maior maior vetor
+     * @param vMenor vetor menor
+     * @param vMaior vetor maior
      * @return retorna-se o vetor maior, com o conte√∫do do vetor menor.
      */
-    private int[] tranfereConteudo(int[] menor, int[] maior) {
-        System.arraycopy(menor, 0, maior, 1, menor.length);
-        return maior;
+    private int[] tranfereConteudo(int[] vMenor, int[] vMaior) {
+        System.arraycopy(vMenor, 0, vMaior, 1, vMenor.length);
+        return vMaior;
     }
 
     /**
